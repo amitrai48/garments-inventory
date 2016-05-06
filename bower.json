@@ -1,0 +1,29 @@
+{
+  "name": "Neelam Garments",
+  "homepage": "https://github.com/amitrai48/garments-inventory",
+  "authors": [
+    "amitrai48 <amitrai48@gmail.com>"
+  ],
+  "description": "A simple application to take user inputs before stacking up new inventories.",
+  "main": "",
+  "keywords": [
+    "Spring",
+    "Inventory-Builder",
+    "MongoDB"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.18",
+    "angular-mocks": "^1.5.5"
+  }
+}
