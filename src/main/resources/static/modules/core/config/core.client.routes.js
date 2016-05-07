@@ -8,7 +8,8 @@
 		})
 		.state('details',{
 			url:'/details/:categoryId',
-			templateUrl:'modules/core/views/detail.client.view.html'
+			templateUrl:'modules/core/views/detail.client.view.html',
+			controller:'detailController'
 		});
 	}]);
 })();

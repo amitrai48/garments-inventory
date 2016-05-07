@@ -15,7 +15,7 @@ public class InventoryConfig {
 	@Indexed(unique=true)
 	private String product;
 	
-	private String size[];
+	private Object size[];
 	
 	private String model[];
 
@@ -35,12 +35,12 @@ public class InventoryConfig {
 		this.product = product;
 	}
 
-	public String[] getSize() {
+	public Object getSize() {
 		return size;
 	}
 
-	public void setSize(String[] size) {
-		this.size = size;
+	public void setSize(Object[] size) {
+		this.size =  size;
 	}
 
 	public String[] getModel() {

@@ -32,9 +32,10 @@ public class InventoryConfigController {
 		return inventoryConfigRepository.save(inventoryConfig);
 	}
 	
-	@RequestMapping(value="{id}", method=RequestMethod.PUT)
+	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public InventoryConfig findByProduct(@PathVariable("id") String id)
 	{
+		System.out.println("Called");
 		return inventoryConfigRepository.findByProductLike(id);
 	}
 	
