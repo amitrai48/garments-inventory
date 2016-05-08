@@ -17,6 +17,15 @@ angular.module('core.routes').config(['$stateProvider','$urlRouterProvider',func
 	templateUrl:'modules/core/views/thankyou.client.view.html',
 	controller:'thankyouController'
 	})
+	.state('productfeedback',{
+	url:'/productfeedback',
+	templateUrl:'modules/core/views/productfeedback.client.view.html'
+	})
+	.state('feedbackproductwise',{
+	url:'/feedbackproductwise/:categoryId',
+	templateUrl:'modules/core/views/feedbackproductwise.client.view.html',
+	controller:'productfeedbackController'
+	})
 	.state('final',{
 	url:'/submit',
 	templateUrl:'modules/core/views/final.client.view.html',
