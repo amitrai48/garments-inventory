@@ -29,10 +29,19 @@ a:hover{
 }
 
 .navbar-default{
-	background: #EDEDED;
-    border-bottom: 1px solid #D9DEE4;
+	background: #3949ab;
+    border-bottom: 1px solid #3949ab;
     margin-bottom: 10px;
     border-radius: 0;
+}
+
+.navbar-default .navbar-header a{
+	    color: #FFF;
+    font-size: 22px;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+	color:#FFF;
 }
 
 .margin-top-10{
