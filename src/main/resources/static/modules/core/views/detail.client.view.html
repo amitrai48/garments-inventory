@@ -295,10 +295,11 @@
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-sm-offset-1 form-horizontal margin-xs-top-20">
+						<form role="form" name="inventorycConfigForm" data-ng-submit="inventorycConfigForm.$valid && addCombination()">
 						<div class="form-group">
 							<label class="control-label col-xs-12 col-sm-3" for="color"> Color </label>
 							<div class="col-xs-11 col-sm-9">
-								<input type="text" class="form-control" name="color" id="color"/>
+								<input type="text" class="form-control" name="color" data-ng-model="product.color"  id="color"/>
 							</div>
 						</div>
 						<div class="form-group">
@@ -312,18 +313,56 @@
 						<div class="form-group">
 							<label class="control-label col-xs-12 col-sm-3" for="size">Type </label>
 							<div class="col-xs-11 col-sm-9">
-								<select class="form-control" name="type" id="type" >
-									<option value="1">Type 1</option>
-									<option value="2">Type 2</option>
-									<option value="3">Type 3</option>
+								<select class="form-control" name="type" id="type" data-ng-model="product.model" data-ng-options="model.value as model.value for model in config.model">
+									<option value="">--Select a model--</option>
 								</select>
 							</div>
 						</div>
+						<div class="form-group">
+							<!-- <div class="col-xs-11 col-sm-9">
+								<span class="input-group-btn btn pull-right">
+									<button type="submit" class="btn btn-primary">Add</button>
+									<a ui-sref="home()"><button type="button" class="btn btn-primary">Done</button></a>
+								</span>
+							</div> -->
+							<div class="col-xs-11 col-sm-12 text-right">
+								<button type="submit" class="btn btn-primary">Add</button>
+								<button type="button" class="btn btn-success"><a ui-sref="home">Done</a></button>
+							</div>
+							
+						</div>
+						</form>
+						
+						
+						
+						
 					</div>
 					
 				</div>
 			</div>
 		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="combination in combinations">
+							<div class="custom-panel">
+								<div class="panel-title">
+									<h2>{{combination.product}}</h2>
+									<span class="delete" style="position:absolute;right:10px;top:10px;"><span class="glyphicon glyphicon-remove-circle" ng-click="removeCombination(combination)"></span></span>
+									<div class="clearfix"></div>
+								</div>
+								<div class="ev-content">
+									<div class="small-svg-icon" style="text-align:center;">
+										<i class="glyphicon glyphicon-gift" style="font-size:50px;"></i>
+									</div>
+									<div class="info">
+										<p>Size : {{combination.size}}</p>
+										<p>Model : {{combination.model}}</p>
+										<p>Color : {{combination.color}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
 	</div>
 
 </div>

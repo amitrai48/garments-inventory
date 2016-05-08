@@ -28,6 +28,7 @@ public class FeedbackController {
 	@RequestMapping(method=RequestMethod.POST)
 	public Feedback save(@Validated @RequestBody Feedback feedback)
 	{
+		System.out.println(feedback.toString());
 		return feedbackRepository.save(feedback);
 	}
 	
@@ -43,15 +44,15 @@ public class FeedbackController {
 //		feedbackRepository.deleteByProductLike(id);
 //	}
 	
-	@RequestMapping(value="{id}", method=RequestMethod.PUT)
-	public List<Feedback> findByEmailId(@PathVariable("id") String id)
-	{
-		return feedbackRepository.findByEmailIdLike(id);
-	}
-	
-//	@RequestMapping(value="{id}", method=RequestMethod.PUT)
-//	public List<Feedback> findByProduct(@PathVariable("id") String id)
+//	@RequestMapping(value="/{id}", method=RequestMethod.GET)
+//	public List<Feedback> findByEmailId(@PathVariable("id") String id)
 //	{
-//		return feedbackRepository.findByProductLike(id);
+//		return feedbackRepository.findByEmailIdLike(id);
 //	}
+	
+	@RequestMapping(value="/{id}", method=RequestMethod.GET)
+	public List<Feedback> findByProduct(@PathVariable("id") String id)
+	{
+		return feedbackRepository.findByProductLike(id);
+	}
 }
