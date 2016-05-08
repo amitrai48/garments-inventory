@@ -134,6 +134,40 @@ a:hover{
 	height:100%;
 }
 
+.btn{
+	border-radius:0;
+}
+
+ul.color-picker{
+	padding-left:0;
+}
+
+ul.color-picker li{
+	list-style-type:none;
+	height:40px;
+	width:40px;
+	margin:5px 2px;
+	float:left;
+	cursor:pointer;
+	position:relative;
+}
+
+ul.color-picker li i{
+	display:none;
+}
+
+ul.color-picker li.selected {
+    border: 1px solid #333;
+}
+
+ul.color-picker li.selected i{
+	    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #FFF;
+    font-size: 14px;
+}
 @media(max-width:768px){
 	.margin-xs-top-20{
 		margin-top:20px;

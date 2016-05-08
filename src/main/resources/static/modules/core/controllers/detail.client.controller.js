@@ -18,6 +18,7 @@
 			}
 		console.log("Called");
 		$scope.config ={};
+		$scope.product={};
 		detailService.getConfig($scope.category).then(function(response){
 			$scope.config = response.data;
 			//$scope.config.size = JSON.parse($scope.config.size);

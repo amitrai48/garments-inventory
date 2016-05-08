@@ -8,7 +8,7 @@
 				</div>
 				<div class="ev-content">
 					<div class="col-xs-12 col-sm-5">
-						<div class="svg-icon" data-ng-if="category==='shirts'">
+						<div class="svg-icon" data-ng-if="category==='shirts'" data-ng-style="{'fill':product.color.value}">
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="34.865px" height="34.865px" viewBox="0 0 34.865 34.865" style="enable-background:new 0 0 34.865 34.865;"
 	 xml:space="preserve">
@@ -54,7 +54,7 @@
 </svg>
 						</div>
 						
-						<div class="svg-icon" data-ng-if="category==='casual'">
+						<div class="svg-icon" data-ng-if="category==='casual'" data-ng-style="{'fill':product.color.value}">
 						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 434.211 434.211" style="enable-background:new 0 0 434.211 434.211;" xml:space="preserve">
 <g>
@@ -139,7 +139,7 @@
 </svg>
 						
 						</div>
-						<div class="svg-icon" data-ng-if="category==='trousers'">
+						<div class="svg-icon" data-ng-if="category==='trousers'" data-ng-style="{'fill':product.color.value}">
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="40.595px" height="40.596px" viewBox="0 0 40.595 40.596" style="enable-background:new 0 0 40.595 40.596;"
 	 xml:space="preserve">
@@ -179,7 +179,7 @@
 </svg>
 						</div>
 						
-						<div class="svg-icon" data-ng-if="category==='jeans'">
+						<div class="svg-icon" data-ng-if="category==='jeans'" data-ng-style="{'fill':product.color.value}">
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 418.331 418.331" style="enable-background:new 0 0 418.331 418.331;" xml:space="preserve">
 <g>
@@ -299,7 +299,7 @@
 						<div class="form-group">
 							<label class="control-label col-xs-12 col-sm-3" for="color"> Color </label>
 							<div class="col-xs-11 col-sm-9">
-								<input type="text" class="form-control" name="color" data-ng-model="product.color"  id="color"/>
+								<color-Picker model="product.color"></color-Picker>
 							</div>
 						</div>
 						<div class="form-group">
