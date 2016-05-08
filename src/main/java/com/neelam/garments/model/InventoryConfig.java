@@ -17,7 +17,18 @@ public class InventoryConfig {
 	
 	private Object size[];
 	
-	private String model[];
+	private Object model[];
+	
+	private Object color[];
+	
+
+	public Object[] getColor() {
+		return color;
+	}
+
+	public void setColor(Object[] color) {
+		this.color = color;
+	}
 
 	public String getId() {
 		return id;
@@ -43,11 +54,11 @@ public class InventoryConfig {
 		this.size =  size;
 	}
 
-	public String[] getModel() {
+	public Object[] getModel() {
 		return model;
 	}
 
-	public void setModel(String[] model) {
+	public void setModel(Object[] model) {
 		this.model = model;
 	}
 

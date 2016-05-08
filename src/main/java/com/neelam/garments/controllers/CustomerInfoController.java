@@ -28,7 +28,11 @@ public List<CustomerInfo> findA()
 @RequestMapping(method=RequestMethod.POST)
 public CustomerInfo save(@Validated @RequestBody CustomerInfo customerInfo)
 {
-	return customerRepository.save(customerInfo);
+	if(customerRepository.findByEmailIdLike(customerInfo.getEmailId())==null)
+	{
+		return customerRepository.save(customerInfo);
+	}
+	return null;
 }
 
 @RequestMapping(value="{id}", method=RequestMethod.PUT)

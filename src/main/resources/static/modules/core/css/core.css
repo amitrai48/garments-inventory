@@ -10,6 +10,20 @@ html,body{
 .padding-0{
 	padding:0;
 }
+
+.btn{
+	border-radius:0;
+}
+
+.alert{
+	padding:5px 10px;
+	margin-top:5px;
+	border-radius:0;
+	margin-bottom:0;
+}
+.btn a{
+	color:inherit;
+} 
 a:hover{
 	text-decoration:none;
 }
