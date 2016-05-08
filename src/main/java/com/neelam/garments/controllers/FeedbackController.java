@@ -18,12 +18,12 @@ public class FeedbackController {
 
 	@Autowired
 	FeedbackRepository feedbackRepository;
-	
-	@RequestMapping(method=RequestMethod.GET)
-	public List<Feedback> findA()
-	{
-		return feedbackRepository.findAll();
-	}
+//	
+//	@RequestMapping(method=RequestMethod.GET)
+//	public List<Feedback> findA()
+//	{
+//		return feedbackRepository.findAll();
+//	}
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public Feedback save(@Validated @RequestBody Feedback feedback)

@@ -24,6 +24,13 @@
 						 });
 					
 					},
+					getFeedbackProductWise:function(product){
+						console.log("product = ",product);
+						 return $http.get("/feedback/"+product).then(function(response){
+							return response; 
+						 });
+					
+					},
 			currentConfig:[]
 		};
 	}]);
