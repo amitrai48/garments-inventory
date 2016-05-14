@@ -57,13 +57,26 @@
 									<div class="clearfix"></div>
 								</div>
 								<div class="ev-content">
-									<div class="small-svg-icon" style="text-align:center;">
-										<i class="glyphicon glyphicon-gift" style="font-size:50px;"></i>
+									<div class="small-svg-icon">
+										<div class="small-svg-icon" data-ng-style="{'fill':combination.color.value}">
+										<svg class="icon" data-ng-if="combination.product==='shirts'">
+										  <use xlink:href="#shirts" />
+										</svg>
+										<svg class="icon" data-ng-if="combination.product==='casual'">
+										  <use xlink:href="#casual" />
+										</svg>
+										<svg class="icon" data-ng-if="combination.product==='trousers'">
+										  <use xlink:href="#trousers" />
+										</svg>
+										<svg class="icon" data-ng-if="combination.product==='jeans'">
+										  <use xlink:href="#jeans" />
+										</svg>
+									</div>
 									</div>
 									<div class="info">
 										<p>Size : {{combination.size}}</p>
 										<p>Model : {{combination.model}}</p>
-										<p>Color : {{combination.color}}</p>
+										<p>Color : {{combination.color.name}}</p>
 									</div>
 								</div>
 							</div>

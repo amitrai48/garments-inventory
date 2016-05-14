@@ -35,7 +35,6 @@ public class InventoryConfigController {
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public InventoryConfig findByProduct(@PathVariable("id") String id)
 	{
-		System.out.println("Called");
 		return inventoryConfigRepository.findByProductLike(id);
 	}
 	

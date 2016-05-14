@@ -143,6 +143,16 @@ a:hover{
 	height:100%;
 }
 
+.small-svg-icon{
+	height: 50px;
+    width: 50px;
+    margin: 10px auto;
+}
+.small-svg-icon svg{
+	width:100%;
+	height:100%;
+}
+
 .btn{
 	border-radius:0;
 }
@@ -167,6 +177,10 @@ ul.color-picker li i{
 
 ul.color-picker li.selected {
     border: 1px solid #333;
+}
+
+span.glyphicon-remove-circle{
+	cursor:pointer;
 }
 
 ul.color-picker li.selected i{

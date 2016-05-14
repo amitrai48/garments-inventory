@@ -25,21 +25,25 @@ angular.module('core').provider('colorPickerConfig',function(){
 	return{
 		scope:{
 			selected : "=?",
-			customisedColor: "=colors",
-			model:"="
+			customisedColor: "=colors"
 		},
 		restrict:'E',
 		template:'<ul class="color-picker"><li ng-repeat="color in colors" ng-class="{selected: (color===selected)}" ng-click="pick(color)" ng-style="{\'background-color\':color.value};"><i class="glyphicon glyphicon-ok"></i></li></ul>',
 		replace:true,
 		link:function(scope,element,attrs){
-			console.log("Called dir");
 			scope.colors = scope.customisedColor || colorPickerConfig.defaultColors;
 			scope.selected = scope.selected || scope.colors[0];
-			scope.model = scope.selected;
 			scope.pick = function (color) {
                 scope.selected = color;
-                scope.model = scope.selected;
             };
+            
+            scope.$watch(function(){
+            	return scope.selected
+            	},function(value){
+            	if(!value){
+            		scope.selected = scope.colors[0];
+            	}
+            });
 		}
 	}
 	

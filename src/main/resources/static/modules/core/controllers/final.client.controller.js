@@ -51,7 +51,7 @@
 			
 			if(feedbacks!==undefined && feedbacks.length>0  )
 			{
-				var finalFeedback={emailId:$scope.customerInfo.emailId, requirements : feedbacks};
+				var finalFeedback={emailId:$scope.customerInfo.emailId,name:$scope.customerInfo.name, requirements : feedbacks};
 				console.log("finalFeedback",finalFeedback);
 				detailService.submitFeedback(finalFeedback).then(function(response){
 				console.log("submitFeedback response",response);

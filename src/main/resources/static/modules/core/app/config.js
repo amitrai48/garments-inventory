@@ -1,7 +1,7 @@
 'use strict';
 var ApplicationConfiguration = (function(){
 	var applicationModuleName = "neelam";
-	var applicationModuleVendorDependencies = ['ui.router'];
+	var applicationModuleVendorDependencies = ['ui.router','googlechart'];
 	var registerModule = function(moduleName,dependencies){
 		angular.module(moduleName, dependencies || []);
 		angular.module(applicationModuleName).requires.push(moduleName);

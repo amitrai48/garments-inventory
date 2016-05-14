@@ -16,7 +16,8 @@ public class Feedback{
 	@NotBlank
 	private String emailId;
 	
-	
+	@NotBlank
+	private String name; 
 	
 	private FeedbackConfig requirements[];
 
@@ -44,9 +45,13 @@ public class Feedback{
 		this.requirements = requirements;
 	}
 
+	public String getName() {
+		return name;
+	}
 
-
-
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	@Override
 	public String toString() {
